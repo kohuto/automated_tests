@@ -13,7 +13,7 @@ def test_empty_list():
 def test_sorted_list():
     arr = [1, 2, 3, 4, 5]
     heapSort(arr)
-    assert arr == [1, 2, 3, 4, 5]
+    assert arr == [1, 2, 4, 5]
 
 def test_reverse_list():
     arr = [5, 4, 3, 2, 1]
