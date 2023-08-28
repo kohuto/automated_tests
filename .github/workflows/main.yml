@@ -1,0 +1,27 @@
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - main  # Předpokládáme, že hlavní větev je nazývána "main". Pokud ne, nahraďte názvem vaší hlavní větve.
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11  # Nahraďte verzí Pythonu, kterou potřebujete
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt  # Předpokládáme, že máte requirements.txt s potřebnými knihovnami. Pokud ne, nainstalujte potřebné knihovny ručně.
+
+    - name: Run tests
+      run: |
+        # Předpokládáme, že používáte pytest. Pokud ne, nahraďte příkazem pro spuštění vašich testů.
+        pytest
