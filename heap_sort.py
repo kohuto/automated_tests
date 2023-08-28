@@ -30,7 +30,7 @@ def main():
         
         heapSort(input_list)
         
-        print("Seřazené pole je:")
+        print("Seřazené pole je: ")
         for num in input_list:
             print(num, end=" ")
             
